@@ -1,0 +1,144 @@
+Orden alfabetico(tabla,categorias,contenido)
+
+ABD(DONANTE):Indica la cantidad de donantes de otros operadores por fecha
+AGG_DL_CANT_CHURN(CHURN,MOVIMIENTOS):Indica por fecha acumulada entre dias la cantidad de churn que hubo y el tipo  
+AGG_DL_CHURN_INACTIVIDAD_PRE(CHURN,TRAFICO,DATOS):Indica por subscriber los bytes totales y minutos totales haciendo enfasis en los quecayeron en churn inactividad
+AGG_DL_COMP_CALL_XP(USUARIO,MOVIMIENTOS): Da por subscriber la fecha de alta y el movimiento realizado a portacion o migracion
+AGG_DL_DATA(TRAFICO,DATOS): nos da la informacion por semana, dia , subscriber, numero de cuantos bytes consumieron y en que tipo de conexion
+AGG_DL_ENDING_DEVICES(USUARIO):Da por subscriber la informacion del celular asociado a la simcard de wom  
+AGG_DL_FRANJA_RECARGAS(RECARGAS): Indica la franja horaria que el subscriber mas recargo
+AGG_DL_FRECUENCIA_PAQUETES(PAQUETES):Indica por subscriber el paquete favorito con su cantidad en 1 y 3 meses
+AGG_DL_GESTORES_RECARGAS(RECARGAS,PAQUETES):Indica por subscriber el canal mas usado para recargas o paquetes tanto de valor y cantidad
+AGG_DL_INS_PREPAGO_RFM(RECARGAS,USUARIO):Indica antiguedad y dias de inactividad del usuario de prepago y su valor total de recargas hechas en 1 ,2 , 3 meses ademas si compro el paquete grande
+AGG_DL_LINEAS_CEDULA(USUARIO):Indica la cantidad de lineas que tiene cada cedula y tipo de cedula
+AGG_DL_MOR_NUM_ALERTA_TEMP(COMPETENCIA):Indica el dia y la duracion en segundos de una llamada de la competencia a un subscriber nuestro (usa los numeros identificados de competencia)
+AGG_DL_RECARGAS_PAQUETES(RECARGAS,PAQUETES):Indica por subscriber el valor y cantidad de 1 y 3 meses de paquetes y recargas realizadas ademas de dar fecha de ultima recarga y tipo de paquete adquirido
+AGG_DL_SUBS_ENDING_MOVIM(USUARIO,MOVIMIENTOS):da informacion del subscriber como numero , de donde viene y a donde va y el movimiento tipo nombre realizado con fecha alta y baja 
+AGG_DL_USERS_CELDA(TRAFICO,DATOS):da por numero y hora del dia la celda que se conecto con la cantidad de cdr y bytes consumidos
+AGG_DL_USERS_KPIS(TRAFICO,DATOS):da por numero y dia el total de bytes consumidos y los % de ocupacion promedio que se tuvo tanto de subida como bajada
+AGG_DL_VOICE(TRAFICO,VOZ):da por semana y dia y subscriber el total de llamadas por tipo y la duracion en segundos totales con cuales fueron normales y cuales fueron con error
+***AGG_ML_ADN_POST_ENERO():solo datos de enero 2022
+***AGG_ML_ADN_POSTPAID():solo datos de diciembre 2021
+***AGG_ML_CHURN_OFFER_202106():Solo datos de 2021
+***AGG_ML_CHURN_OFFER_202107():Solo datos de 2021
+***AGG_ML_CHURN_OFFER_202108():Solo datos de 2021
+***AGG_ML_MENSUAL_POS:solo datos feb 2022
+***AGG_MODPRE_COMPCALL(COMPETENCIA):revisar porque no cargan los datos
+***AGG_MODPRE_PQRS(PQRS): Indica por subscriber la llamada que hizo a que categoria pertenecen , revisar si esta vacia
+AGG_SL_CDRS_ROLLOUT(TRAFICO,DATOS): Da por celda la cantidad de bytes y cdrs realizados en una semana con su respectiva ubicacion
+AGG_SL_CDRS_ROLLOUT_VOZ(TRAFICO,VOZ):Da por celda la cantidad total de minutos , segundos de cdrs y llamadas ademas de dar la ubicacion de la celda
+AGG_WL_CDRS_VOICE(TRAFICO,VOZ):da por semana la cantidad de minutos y cdrs con distancia de la llamada recibida o hecha por usuario wom , ademas de ubicacion
+AGG_WL_CELDAS_USUARIOS(TRAFICO,DATOS):da por semana, hora y subscriber cuantos bytes y cdrs consumio en determinada celda y cuantos usuarios estaban en la misma celda a esa hora
+AGG_WL_FRANJA_USUARIO(TRAFICO,DATOS):Da por semana , hora y celular cuantos bytes consumio en determinada celda
+***AGG_WL_KPIS_EXPERIENCIA():tabla vacia revisada 9:20am
+AGG_WL_MODPRE_REC(RECARGAS,PAQUETES):Da por subscriber la cantidad de recargas y valor de recargas o paquetes con fecha de este ultimo en 30 dias y 7 dias
+AGG_WL_MODPRE_TRAF(TRAFICO,MOVIMIENTOS):Da por subscriber y movimiento tipo nombre la fecha de alta y los ultimos traficos cantidad , total ,duracion,bytes en 30 y 7 dias 
+AGR_TRAFICO_DROU_DIARIO_PREP(TRAFICO,DATOS):Da por suscriber y dia la cantidad de megas consumidas en 3g,4g,5g
+AGR_TRAFICO_MOU_DIARIO_PREP(TRAFICO,VOZ):Da por subscriber y dia los minutos totales salientes y entrantes 
+***AGR_TRAFICO_MOU_OCS: NO SE ENTIENDE LA TABLA
+***BAJAS_PROGRAMADAS(USUARIO,CHURN):Da el MSISDN proximos a bajar 
+BASE_POSPAGO_QUEJAS(PQRS):Da por subscriber el tipo de queja si era por senal , datos, etc...
+BASE_PREPAGO_INACTIVIDAD(USUARIO,MOVIMIENTOS): Da por subscriber el movimiento tipo nombre y la informacion historica de antiguedad , dias inact ,megas totales , minutos totales y dealer
+ ***BASE_PREPAGO_TIPO_USUARIO: tabla vacia revisada a las 950am
+ ***Campaña_Whatsapp_W12_13: tabla sin vista 
+CDRS_VOZ_USUARIOS(TRAFICO,VOZ):da por semana y celular y el sentido de las llamadas el total de minutos y cdrs que hubo , estos minutos los reparte segun la conexion que haya hecho y la ubicacion mas usada
+CHURN_PREDICTOR(CHURN,USUARIO):Da informacion del usuario y las probabilidades y clasificacion de los diferentes riesgos 
+CHURN_PREDICTOR_3_PORT_CONTROL(CHURN):Da la fecha de prediccion de cada subscriber y clasifica el riesgo con posible motivo
+***CHURN_PREDICTOR_3_PORT_GESTION(CHURN):similar a la de arriba 
+CHURN_PREDICTOR_3_PORTA_TODO(CHURN): Da la fecha de prediccion de cada subscriber y su probabilidad de portacion y uso que se le esta dando 
+***CHURN_PREDICTOR_V2022(CHURN,USUARIO): Da por subscriber la fecha que correo el modelo y sus diferentes riesgos con los parametros usados
+CICLOS_TEMP(USUARIO): Da por subscriber los numeros y servicios relacionados y su ciclo(fecha) de facturacion 
+CIUDAD_TRAFICO(USUARIO,TRAFICO,DATOS):Da por numero celular y semana las diferentes cantidades en TB que consumio en las diferentes celdas ademas de asocisar la ubicacion y tipo de celda
+COM_TT_AA(PQRS): da el numero de orden y el servicio ofrecido
+COORDENADAS(TRAFICO): Da la ubicacion a la que hace referencia una celda
+CR_DL_BASE_POSPAGO(USUARIO,MOVIMIENTOS):da la informacion del cliente pospago como antiguedad , cedula , movimiento tipo nombre , el nombre del plan y la informacion de donde lo adquirio
+CR_DL_BASE_POSPAGO_BILL(TRAFICO,DATOS): Da por subscriber los bytes consumidos en las diferentes billeteras
+CR_DL_BASE_POSPAGO_PQR(PQRS):Da por subscriber el total de pqrs con su clasificacion tanto historica como en periodo de tiempo dado
+CR_DL_BASE_PREPAGO(MOVIMIENTOS)Da por subscriber el movimiento tipo nombre y fecha de alta ademas de calcular diferentes fechas a partir de hoy
+***CR_DL_BLACKLIST(): TABLA VACIA revisada lunes 215pm
+CR_DL_INACTIVIDADES_PRE(USUARIO,TRAFICO): Da por subscriber y periodo proceso codigo la antiguedad en dias y la ultima vez que hizo trafico tanto voz como datos
+***CR_DL_KPIS(RECARGAS,PAQUETES): Da por periodo proceso codigo , movimiento nombre y ubicacion de consultor el total de clientes y recargas,paquetes con valores comprados 
+CR_DL_KPIS_CELDA(TRAFICO,DATOS):Da por subscriber y dia la celda que mas trafico hubo con bytes, cdrs y que tan llena estuvo la celda usando ponderacion con las demas celdas del dia
+***CR_DL_KPIS_V2(RECARGAS,PAQUETES): igual QUE CR_DL_KPIS
+CR_DL_NUMEROS_ALERTA(COMPETENCIA): da por periodo proceso codigo y numero alerta la cantidad de usuarios que llamo y el total en segundos con promedio de estas llamadas
+CR_DL_NUMEROS_COMPETENCIA(COMPETENCIA):Da el numero detectado de la competencia con el operador y la fecha que se detecto 
+***CR_DL_NUMEROS_GESTIONADOS(NUMEROS):
+CR_DL_NUMEROS_IDENTIFICADOS(COMPETENCIA): Da el numero y la informacion obtenida del truecaller 
+***CR_DL_NUMEROS_NUEVOS(NUMEROS): solo 4 datos 
+***CR_DL_NUMEROS_OUTBOUND(NUMEROS): no se entiende que numeros son 
+***CR_DL_NUMEROS_OUTBOUND_TEMP(NUMEROS): No se entiende que numeros referencian
+***CR_DL_NUMEROS_PNN(NUMEROS): No se entiende tabla
+***CR_DL_NUMEROS_PNN_TOTAL(NUMEROS): da el numero y la respuesta que tuvo a la llamada
+***CR_DL_NUMEROS_PNN_TOTAL_PROV(): tabla vacia
+***CR_DL_NUMEROS_PRESELECTION(NUMEROS): no se entiende que referencia 
+CR_DL_PAQUETES_DET(PAQUETES): Da por subscriber el paquete favorito y cantidad de este ademas de indicar el canal mas usado por cantidad y por valor 
+CR_DL_PQR(PQRS,MOVIMIENTOS): da por subscriber y fecha el movimiento realizado debido a un pqr,ademas clasifica ese pqr
+CR_DL_PRBS_CELDA(TRAFICO,DATOS):da por fecha y celda el porcentaje de ocupacion de subida y bajada que tuvo
+***CR_DL_PREPAGO_MCCM():Tabla vacia revisada lunes a las 240pm
+CR_DL_VARIABLES_OUTBOUND(COMPETENCIA): A numeros de otros operadores da la cantidad de llamadas entrantes y salientes con sus duraciones y cantidades ademas de diferenciar segun el tipo de usuario wom prepago o pospago 
+***CR_GESTION_NUMEROS(): tabla vacia revisada lunes 240pm
+***CR_GESTION_NUMEROS_TEMP():pensar categoria da el numero llamado la respuesta que tuvo 
+***CR_GESTION_NUMEROS_TEST(): da un numero y el resto vacio 
+***CR_ML_DEVICES(USUARIO):Algo de info del cel no se entiende
+***CR_ML_DEVICES_DETAIL(): tabla vacia revisada lunes 245pm
+***CR_ML_PLANES_POSPAGO():pensar categoria da el numero de plan comercial y nombre con capacidad en pospago
+CR_WL_CAMPANIAS_CHURN_PREPAGO(CHURN):da por subscriber a los que tienen riesgo el tratamiento que se les dara 
+CR_WL_PREPAGO_BASE(USUARIO,MOVIMIENTOS):da por subscriber el movimiento tipo nombre y el tipo de usuario 
+***CR_WL_PREPAGO_BASE_TEMP():misma info que CR_WL_PREPAGO_BASE
+***CR_WL_PREPAGP_BASE_TEMP(USUARIO,TRAFICO):por subscriber y consumos categoriza el tipo de usuario , revisar nombre
+***CUSTOMER_LIFETIME_VALUE(USUARIO,RECARGAS,PAQUETES,CHURN):REvisar no se entiende del todo 
+DEMO_CHURN(USUARIO,MOVIMIENTOS,CHURN):Tabla que contiene informacion de los usuarios para modelo churn 
+***DESCUENTOS():Buscar categoria a cada oferta le da un id y explica su duracion y beneficio
+***DEVICES_DWH(USUARIO): Da informacion de cada device , parece estar vacia los campos de compatibilidad
+DP_CDRS_DIA(TRAFICO,DATOS):Da por fecha la ubicacion de la celda y el total de cdrs y megas consumidas y total de numeros
+DP_CDRS_FRANJA(TRAFICO,DATOS):Da por franja horario la ubicacion de la celda y trafico de cdrs y megas usadas ademas del total de numeros
+***DP_CDRS_PUROS(TRAFICO,DATOS): misma info de las 2 de arriba pero menos completa
+***DP_CDRS_PUROS_FRANJA(TRAFICO,DATOS): misma informacion aunque como adicional da el numero que los realizo 
+DP_CDRS_USUARIOS(TRAFICO,DATOS):da por celular y semana el trafico que uso en ubicacion fav y megas por cada celda operador con total cdrs
+DP_MUN_EST(TRAFICO,DATOS): Da por semana y municipo el total de cdrs y diferentes usuarios activos por estacion
+DP_MUN_EST_VOZ(TRAFICO,VOZ):da por semana y municipio el total de minutos ,cdrs y usuarios activos por estacion
+DP_MUN_TOT(TRAFICO,DATOS): da por semana y ubicacion de celda el total de cdrs usuarios , estaciones y teras consumidas
+DP_MUN_TOT_VOZ(TRAFICO,VOZ): da por semana y ubicacion el total de minutos , cdrs, usuarios y estaciones 
+DP_VALIDACION_ROLLOUT_DATA(TRAFICO,DATOS):da por fecha hasta franja horaria las teras y cdrs consumidas de cada operador
+ENDING_PREPAGO_OUTBOUND(USUARIO,MOVIMIENTOS):info similar al ending de datawarehouse
+INSERT_CR_DL_GROSS_EXPERIENCIA(USUARIO,MOVIMIENTOS):para todos los gross de informacion del usuario como trafco, fecha alta consultor y ubicacion
+KWAI_TEMP(USUARIO):da los numeros que adquirieron el plan de KWAI_TEMP
+***MAP_PLANES(): tabla vacia revisada martes 1115am
+MARGEN_CONTRIBUCION_LINEA_MES(USUARIO,RECARGAS,PAQUETES): Da por subscriber los revenue y margen de contribucion que ha tenido en cada tipo de plan por periodo
+MODELO_CHURN_PRE(CHURN):Da por subscriber , tipo usuario periodo proceso codigo y mov nombre el resutlado del modelo de churn pre 
+***MODELO_CHURN_PREPAGO(USUARIO,CHURN):Da por usuario lso parametros y los resultados del modelo de churn 
+***MODELO_CHURN_TEMP(USUARIO,CHURN,TRAFICO):Categoriza por trafico y tipo de usuarios , parece info repetida
+MODELO_CHURN_TEMPORAL(USUARIO,CHURN): da el resultado del modelo churn y categoriza a los usuarios por consumos
+NUMEROS_ALERTA(COMPETENCIA): Da los numeros de la competencia y el periodo que se detecto , info repetida
+***NUMEROS_ENVIADOS(NUMEROS):numeros pero no se especifica
+NUMEROS_GESTIONADOS(NUMEROS): Numeros llamados el resultado de la llamada
+***PAGO_POS_PRO(): Tabla vacia revisada martes 1140am
+PAQUETES(PAQUETES): Da el nombre del paquete y tipo 
+PLANES_GB(PAQUETES): da el plan comercial cuantas gigas tiene asociada
+POSPAGO_PRO_DIC(PAQUETES):da el subscriber con fecha de alta y tipo de plan si pago o no pago 
+POSPAGO_VOZ(TRAFICO,VOZ):Da por subscriber y semana el sentido de las llamadas y el total en cantidad y duracion ademas de clasificarlas 
+***PRE_TRAIN_SUBS(): Solo trae los subscribers id
+***PREPAGO_CHURN(CHURN): Da por subscriber la antiguedad , el segmento y la prediccion del modelo churn 
+PROB_INACT(CHURN):Da llas probabilidades de cada subgrupo que cae en inactividad
+***promos_PrMa(): tabla sin vista
+***PRUEBA(): Solo 4 numeros , borrar
+***PRUEBA_SCORING(): A cada subscriber id le asigna una letra de score , estos subscriber no esta completo el numero
+***PRUEBA2(): Tabla vacia
+***Records(): Tabla sin vista , palabra reservada?
+***ROLLOUT_SEMANAL(TRAFICO,DATOS): da el cosnumo en tb de distintas celdas con su ubicacion , mirar si esta repetida
+SEGMENTACION_RFM(USUARIO,RECARGAS): da por subscriber informacion de cada segmento y total de recargas
+***SUBSCRIBERS_BLINDAJE(): solo da subscribers id
+SUSPENSIONS(USUARIO,CHURN): Da por subscriber pospago el estado de las diferetnes suspensiones de plan y si hizo reconexion o se churnearon
+***TEMP_JULIO():Da por subscriber los que son gross de que operador y dealer vienen 
+***TEMP_JUNIO(): Misma info que TEMP_JUNIO
+TEMPORAL_RATIOS_VENDEDORES(CHURN): da por consultor nivel 8 el gross total y churn total ademas separando churn por inactividad o por portout
+***TEMPORALL_PRBS(): Tabla sin vista
+***tmp_Blacklist(NUMEROS): Da por numero el periodo proceso y la respuesta que en este caso son los de Blacklist
+***TMP_BLACKLIST(NUMEROS): igual que la de arriba
+TRAFICO_CANCELACIONES(TRAFICO,DATOS):Da por subscriber los bytes que consumio en 3g y 4g con los totales
+TRAFICO_MES_INACT_PREPAGO(TRAFICO):Da por subscriber las megas del mes y minutos totales del mes, no se especifica cual mes
+ULT_TRAFICO_PREPAGO(TRAFICO):Da por subscriber la fecha de alta y las fechas que hizo ultimo trafico en datos y en voz 
+USERS_CEDULA(USUARIO):Da por subscriber la cedula asociada
+***USUARIOS_RRC():No se entiende info 
+***VAS_CHURN_PREDICTOR(CHURN):No se entiende info
+WOMERS(NUMEROS):DA Numeros
